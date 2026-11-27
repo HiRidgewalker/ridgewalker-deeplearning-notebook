@@ -16,15 +16,15 @@
 
 ## 技术模块导航
 
-| 技术模块 | 保留数量 | 项目 | 主要学习内容 |
-| --- | ---: | --- | --- |
-| [一、深度学习基础与教学](#module-foundations) | 2 | PyTorch Examples、D2L | 原理与代码对应、基本训练流程、多任务实践 |
-| [二、图像分类训练工程](#module-classification) | 1 | pytorch-classification | 分类任务配置、数据与训练管理、模型对比 |
-| [三、图像分割训练工程](#module-segmentation) | 1 | PyTorch Segmentation | 掩码数据、分割损失、训练与预测 |
-| [四、中文文本分类教学实践](#module-text-classification) | 1 | Chinese-Text-Classification-Pytorch | 固定数据集、多种模型、训练与评估对比 |
-| [五、视觉场景与业务应用](#module-vision-applications) | 4 | Car Tracking、Traffic Video Analytics、License Plate Recognition、Safety Monitoring | 跟踪计数、交通分析、车牌识别、安全监控 |
-| [六、机器人视觉与系统集成](#module-robotics) | 1 | Autonomous Mobile Robot | Python ROS 2 节点、视觉感知、导航与控制集成 |
-| **合计** | **10** | **2 个教学仓库 + 3 个任务训练工程 + 5 个场景应用** | |
+| 技术模块                                                | 保留数量 | 项目                                                                                | 主要学习内容                                |
+| ------------------------------------------------------- | -------: | ----------------------------------------------------------------------------------- | ------------------------------------------- |
+| [一、深度学习基础与教学](#module-foundations)           |        2 | PyTorch Examples、D2L                                                               | 原理与代码对应、基本训练流程、多任务实践    |
+| [二、图像分类训练工程](#module-classification)          |        1 | pytorch-classification                                                              | 分类任务配置、数据与训练管理、模型对比      |
+| [三、图像分割训练工程](#module-segmentation)            |        1 | PyTorch Segmentation                                                                | 掩码数据、分割损失、训练与预测              |
+| [四、中文文本分类教学实践](#module-text-classification) |        1 | Chinese-Text-Classification-Pytorch                                                 | 固定数据集、多种模型、训练与评估对比        |
+| [五、视觉场景与业务应用](#module-vision-applications)   |        4 | Car Tracking、Traffic Video Analytics、License Plate Recognition、Safety Monitoring | 跟踪计数、交通分析、车牌识别、安全监控      |
+| [六、机器人视觉与系统集成](#module-robotics)            |        1 | Autonomous Mobile Robot                                                             | Python ROS 2 节点、视觉感知、导航与控制集成 |
+| **合计**                                                |   **10** | **2 个教学仓库 + 3 个任务训练工程 + 5 个场景应用**                                  |                                             |
 
 <a id="module-foundations"></a>
 
@@ -169,31 +169,31 @@
 
 以下 23 项均来自原集合。排除理由针对本次学习目标；这些库仍可作为保留项目的依赖或工具使用。
 
-| 原编号 | 项目与仓库 | 语言情况 | 排除理由 |
-| --- | --- | --- | --- |
-| 2.1 | [TorchVision](https://github.com/pytorch/vision) | Python，含 C++ / CUDA | 主体是视觉数据集、变换和模型库；`references` 是库内参考代码，不将整个产品库作为教学项目纳入。 |
-| 2.3 | [timm](https://github.com/huggingface/pytorch-image-models) | Python | 主体是视觉模型与训练组件库，提供大量模型供外部项目调用。 |
-| 3.1 | [Ultralytics](https://github.com/ultralytics/ultralytics) | Python | 主体是 YOLO 模型及通用训练、推理接口；本轮保留使用它完成场景任务的应用。 |
-| 3.2 | [MMDetection](https://github.com/open-mmlab/mmdetection) | Python | 面向外部使用的通用检测工具箱与框架；附带完整训练流程仍不改变仓库定位。 |
-| 4.1 | [Hugging Face Transformers](https://github.com/huggingface/transformers) | Python | 主体是预训练模型定义和调用框架，附带示例不作为整库入选理由。 |
-| 4.3 | [Pytorch-NLU](https://github.com/yongzhuo/Pytorch-NLU) | Python | 主体是支持文本分类、序列标注等任务的 NLP 工具包，提供可复用公共接口。 |
-| 5.1 | [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | Python | 主体是 Embedding、检索和重排序模型库，并非具体业务应用或以教学为主体的仓库。 |
-| 5.2 | [FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding) | Python / Notebook | 主体是向量模型、重排序模型及训练工具集合。 |
-| 7.1 | [WeNet](https://github.com/wenet-e2e/wenet) | Python / C++ 等 | 定位为生产级端到端 ASR 工具包；虽然有训练配方和教程，主体仍是通用识别工具链。 |
-| 7.2 | [FunASR](https://github.com/modelscope/FunASR) | Python，含 C / C++ 等 | 主体是语音模型与服务工具包，覆盖训练、识别及配套语音组件。 |
-| 7.3 | [whisper.cpp](https://github.com/ggml-org/whisper.cpp) | C / C++ 为主 | 不符合 Python 主体条件，且主要提供模型推理引擎。 |
-| 8.1 | [F5-TTS](https://github.com/SWivid/F5-TTS) | Python | 是 F5-TTS 模型的官方实现；训练、微调和 Gradio 界面均围绕该模型发布。 |
-| 8.2 | [CosyVoice](https://github.com/QwenAudio/CosyVoice) | Python | 主体是 CosyVoice 语音生成模型及其训练部署能力。 |
-| 8.3 | [Coqui TTS](https://github.com/coqui-ai/TTS) | Python | 主体是多模型 TTS 工具包与接口，面向语音合成能力复用。 |
-| 8.4 | [Piper](https://github.com/OHF-Voice/piper1-gpl) | C++ / Python，C++ 占主导 | 主体是本地 TTS 引擎产品，也不符合 Python 为主要实现语言的条件。 |
-| 9.1 | [TensorBoard](https://github.com/tensorflow/tensorboard) | TypeScript / Python 等 | 主体是训练可视化产品源码，属于学习项目的配套工具。 |
-| 9.2 | [Weights & Biases](https://github.com/wandb/wandb) | Python / Go 等 | 主体是实验平台客户端及相关组件，属于产品 SDK。 |
-| 9.3 | [MLflow](https://github.com/mlflow/mlflow) | Python / TypeScript 等 | 主体是实验与模型管理平台。 |
-| 9.4 | [SwanLab](https://github.com/SwanHubX/SwanLab) | Python | 主体是训练追踪和可视化工具。 |
-| 9.5 | [ClearML](https://github.com/clearml/clearml) | Python | 主体是实验和任务管理产品的 SDK 与工具组件。 |
-| 10.1 | [RabbitMQ](https://github.com/rabbitmq/rabbitmq-server) | 非 Python 为主 | 主体是消息中间件服务端，不符合语言与项目类型条件。 |
-| 10.2 | [pika](https://github.com/pika/pika) | Python | RabbitMQ / AMQP 客户端库，缺少独立场景业务主体。 |
-| 10.3 | [aio-pika](https://github.com/mosquito/aio-pika) | Python | 异步消息客户端库，缺少独立场景业务主体。 |
+| 原编号 | 项目与仓库                                                                    | 语言情况                 | 排除理由                                                                                      |
+| ------ | ----------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------- |
+| 2.1    | [TorchVision](https://github.com/pytorch/vision)                              | Python，含 C++ / CUDA    | 主体是视觉数据集、变换和模型库；`references` 是库内参考代码，不将整个产品库作为教学项目纳入。 |
+| 2.3    | [timm](https://github.com/huggingface/pytorch-image-models)                   | Python                   | 主体是视觉模型与训练组件库，提供大量模型供外部项目调用。                                      |
+| 3.1    | [Ultralytics](https://github.com/ultralytics/ultralytics)                     | Python                   | 主体是 YOLO 模型及通用训练、推理接口；本轮保留使用它完成场景任务的应用。                      |
+| 3.2    | [MMDetection](https://github.com/open-mmlab/mmdetection)                      | Python                   | 面向外部使用的通用检测工具箱与框架；附带完整训练流程仍不改变仓库定位。                        |
+| 4.1    | [Hugging Face Transformers](https://github.com/huggingface/transformers)      | Python                   | 主体是预训练模型定义和调用框架，附带示例不作为整库入选理由。                                  |
+| 4.3    | [Pytorch-NLU](https://github.com/yongzhuo/Pytorch-NLU)                        | Python                   | 主体是支持文本分类、序列标注等任务的 NLP 工具包，提供可复用公共接口。                         |
+| 5.1    | [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | Python                   | 主体是 Embedding、检索和重排序模型库，并非具体业务应用或以教学为主体的仓库。                  |
+| 5.2    | [FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding)                    | Python / Notebook        | 主体是向量模型、重排序模型及训练工具集合。                                                    |
+| 7.1    | [WeNet](https://github.com/wenet-e2e/wenet)                                   | Python / C++ 等          | 定位为生产级端到端 ASR 工具包；虽然有训练配方和教程，主体仍是通用识别工具链。                 |
+| 7.2    | [FunASR](https://github.com/modelscope/FunASR)                                | Python，含 C / C++ 等    | 主体是语音模型与服务工具包，覆盖训练、识别及配套语音组件。                                    |
+| 7.3    | [whisper.cpp](https://github.com/ggml-org/whisper.cpp)                        | C / C++ 为主             | 不符合 Python 主体条件，且主要提供模型推理引擎。                                              |
+| 8.1    | [F5-TTS](https://github.com/SWivid/F5-TTS)                                    | Python                   | 是 F5-TTS 模型的官方实现；训练、微调和 Gradio 界面均围绕该模型发布。                          |
+| 8.2    | [CosyVoice](https://github.com/QwenAudio/CosyVoice)                           | Python                   | 主体是 CosyVoice 语音生成模型及其训练部署能力。                                               |
+| 8.3    | [Coqui TTS](https://github.com/coqui-ai/TTS)                                  | Python                   | 主体是多模型 TTS 工具包与接口，面向语音合成能力复用。                                         |
+| 8.4    | [Piper](https://github.com/OHF-Voice/piper1-gpl)                              | C++ / Python，C++ 占主导 | 主体是本地 TTS 引擎产品，也不符合 Python 为主要实现语言的条件。                               |
+| 9.1    | [TensorBoard](https://github.com/tensorflow/tensorboard)                      | TypeScript / Python 等   | 主体是训练可视化产品源码，属于学习项目的配套工具。                                            |
+| 9.2    | [Weights & Biases](https://github.com/wandb/wandb)                            | Python / Go 等           | 主体是实验平台客户端及相关组件，属于产品 SDK。                                                |
+| 9.3    | [MLflow](https://github.com/mlflow/mlflow)                                    | Python / TypeScript 等   | 主体是实验与模型管理平台。                                                                    |
+| 9.4    | [SwanLab](https://github.com/SwanHubX/SwanLab)                                | Python                   | 主体是训练追踪和可视化工具。                                                                  |
+| 9.5    | [ClearML](https://github.com/clearml/clearml)                                 | Python                   | 主体是实验和任务管理产品的 SDK 与工具组件。                                                   |
+| 10.1   | [RabbitMQ](https://github.com/rabbitmq/rabbitmq-server)                       | 非 Python 为主           | 主体是消息中间件服务端，不符合语言与项目类型条件。                                            |
+| 10.2   | [pika](https://github.com/pika/pika)                                          | Python                   | RabbitMQ / AMQP 客户端库，缺少独立场景业务主体。                                              |
+| 10.3   | [aio-pika](https://github.com/mosquito/aio-pika)                              | Python                   | 异步消息客户端库，缺少独立场景业务主体。                                                      |
 
 原集合中，文本向量编码、ASR、TTS、实验管理和消息队列模块均未留下符合本次条件的独立仓库。这一结果只针对原集合，不代表这些技术方向没有合适的教学或场景项目。
 
@@ -201,30 +201,30 @@
 
 以下八项共用 `pytorch/examples` 仓库，不额外计入 10 个仓库总数。它们虽然涉及具体模型，但所属仓库以教学示例为主体，符合本轮条件。
 
-| 示例项目 | Python 代码入口 | 技术侧重点 |
-| --- | --- | --- |
-| MNIST 手写数字识别 | [mnist/](https://github.com/pytorch/examples/tree/main/mnist) | 分类数据、CNN、训练与验证。 |
-| ImageNet 图像分类 | [imagenet/](https://github.com/pytorch/examples/tree/main/imagenet) | 大规模分类、数据与训练组织。 |
-| Word Language Model | [word_language_model/](https://github.com/pytorch/examples/tree/main/word_language_model) | RNN / Transformer、词级语言建模。 |
-| DCGAN 图像生成 | [dcgan/](https://github.com/pytorch/examples/tree/main/dcgan) | 生成器与判别器、交替优化。 |
-| VAE 图像生成 | [vae/](https://github.com/pytorch/examples/tree/main/vae) | 潜变量、重建目标与 KL 散度。 |
-| Super Resolution | [super_resolution/](https://github.com/pytorch/examples/tree/main/super_resolution) | 图像重建与超分辨率训练。 |
-| Reinforcement Learning | [reinforcement_learning/](https://github.com/pytorch/examples/tree/main/reinforcement_learning) | 环境交互、奖励与策略更新。 |
-| Time Sequence Prediction | [time_sequence_prediction/](https://github.com/pytorch/examples/tree/main/time_sequence_prediction) | LSTM 与序列预测。 |
+| 示例项目                 | Python 代码入口                                                                                     | 技术侧重点                        |
+| ------------------------ | --------------------------------------------------------------------------------------------------- | --------------------------------- |
+| MNIST 手写数字识别       | [mnist/](https://github.com/pytorch/examples/tree/main/mnist)                                       | 分类数据、CNN、训练与验证。       |
+| ImageNet 图像分类        | [imagenet/](https://github.com/pytorch/examples/tree/main/imagenet)                                 | 大规模分类、数据与训练组织。      |
+| Word Language Model      | [word_language_model/](https://github.com/pytorch/examples/tree/main/word_language_model)           | RNN / Transformer、词级语言建模。 |
+| DCGAN 图像生成           | [dcgan/](https://github.com/pytorch/examples/tree/main/dcgan)                                       | 生成器与判别器、交替优化。        |
+| VAE 图像生成             | [vae/](https://github.com/pytorch/examples/tree/main/vae)                                           | 潜变量、重建目标与 KL 散度。      |
+| Super Resolution         | [super_resolution/](https://github.com/pytorch/examples/tree/main/super_resolution)                 | 图像重建与超分辨率训练。          |
+| Reinforcement Learning   | [reinforcement_learning/](https://github.com/pytorch/examples/tree/main/reinforcement_learning)     | 环境交互、奖励与策略更新。        |
+| Time Sequence Prediction | [time_sequence_prediction/](https://github.com/pytorch/examples/tree/main/time_sequence_prediction) | LSTM 与序列预测。                 |
 
 ## 附录 B：语言核验依据
 
 各链接指向 GitHub 的仓库语言统计。语言统计与正文的关键代码入口共同用于判断；Notebook 的文件字节量可能包含输出内容，因此不将其占比直接等同于实现语言。
 
-| 保留仓库 | 核验到的语言组成 | 判定 |
-| --- | --- | --- |
-| [pytorch/examples](https://api.github.com/repos/pytorch/examples/languages) | Python 为主，另有 C++、Shell 等 | 选取 Python 教学示例。 |
-| [d2l-ai/d2l-zh](https://api.github.com/repos/d2l-ai/d2l-zh/languages) | Python 为主，另有 HTML、TeX、Shell | 选取教材的 PyTorch 实现。 |
-| [YijinHuang/pytorch-classification](https://api.github.com/repos/YijinHuang/pytorch-classification/languages) | Python | 分类工程使用 Python。 |
-| [yassouali/pytorch-segmentation](https://api.github.com/repos/yassouali/pytorch-segmentation/languages) | Jupyter Notebook、Python | 核心训练、推理及教程代码使用 Python。 |
-| [Chinese-Text-Classification-Pytorch](https://api.github.com/repos/649453932/Chinese-Text-Classification-Pytorch/languages) | Python | 文本分类工程使用 Python。 |
-| [yelaman1x9/car-tracking](https://api.github.com/repos/yelaman1x9/car-tracking/languages) | Python、HTML、Dockerfile | 核心视频与应用逻辑使用 Python。 |
-| [Traffic-Video-Analytics-Project](https://api.github.com/repos/salvirezwan/Traffic-Video-Analytics-Project/languages) | Jupyter Notebook、Python、JavaScript 等 | 视觉分析与后端使用 Python，React 为配套前端。 |
-| [license-plate-recognition](https://api.github.com/repos/LorenzoVenuti/license-plate-recognition/languages) | Jupyter Notebook、Python | 识别流水线与界面使用 Python。 |
-| [ajitmoharana/safety_platform](https://api.github.com/repos/ajitmoharana/safety_platform/languages) | Python | 安全监控业务逻辑使用 Python。 |
-| [autonomous-mobile-robot](https://api.github.com/repos/Hassaballa1/autonomous-mobile-robot/languages) | Python 为主，另有 C++、C、Shell 等 | 核心应用节点使用 Python，固件等为配套代码。 |
+| 保留仓库                                                                                                                    | 核验到的语言组成                        | 判定                                          |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------- |
+| [pytorch/examples](https://api.github.com/repos/pytorch/examples/languages)                                                 | Python 为主，另有 C++、Shell 等         | 选取 Python 教学示例。                        |
+| [d2l-ai/d2l-zh](https://api.github.com/repos/d2l-ai/d2l-zh/languages)                                                       | Python 为主，另有 HTML、TeX、Shell      | 选取教材的 PyTorch 实现。                     |
+| [YijinHuang/pytorch-classification](https://api.github.com/repos/YijinHuang/pytorch-classification/languages)               | Python                                  | 分类工程使用 Python。                         |
+| [yassouali/pytorch-segmentation](https://api.github.com/repos/yassouali/pytorch-segmentation/languages)                     | Jupyter Notebook、Python                | 核心训练、推理及教程代码使用 Python。         |
+| [Chinese-Text-Classification-Pytorch](https://api.github.com/repos/649453932/Chinese-Text-Classification-Pytorch/languages) | Python                                  | 文本分类工程使用 Python。                     |
+| [yelaman1x9/car-tracking](https://api.github.com/repos/yelaman1x9/car-tracking/languages)                                   | Python、HTML、Dockerfile                | 核心视频与应用逻辑使用 Python。               |
+| [Traffic-Video-Analytics-Project](https://api.github.com/repos/salvirezwan/Traffic-Video-Analytics-Project/languages)       | Jupyter Notebook、Python、JavaScript 等 | 视觉分析与后端使用 Python，React 为配套前端。 |
+| [license-plate-recognition](https://api.github.com/repos/LorenzoVenuti/license-plate-recognition/languages)                 | Jupyter Notebook、Python                | 识别流水线与界面使用 Python。                 |
+| [ajitmoharana/safety_platform](https://api.github.com/repos/ajitmoharana/safety_platform/languages)                         | Python                                  | 安全监控业务逻辑使用 Python。                 |
+| [autonomous-mobile-robot](https://api.github.com/repos/Hassaballa1/autonomous-mobile-robot/languages)                       | Python 为主，另有 C++、C、Shell 等      | 核心应用节点使用 Python，固件等为配套代码。   |
